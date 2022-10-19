@@ -61,9 +61,14 @@ def predict(image):
         'Happy': 0,
         'Sad': 0
     }
+    
+    if prediction[0] < 0:
+        st.markdown("Prediction: Happy")
+    else:
+        st.markdown("Prediction: Sad")
 
-    result = f"{class_names}"
-    return result
+#     result = f"{class_names}"
+#     return result
 
 
 if __name__ == "__main__":
