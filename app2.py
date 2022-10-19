@@ -39,8 +39,8 @@ def main():
                 predictions = predict(image)
                 time.sleep(1)
                 st.success('Classified')
-                st.write(predictions)
-                st.pyplot(fig)
+#                 st.write(predictions)
+#                 st.pyplot(fig)
 
 
 def predict(image):
