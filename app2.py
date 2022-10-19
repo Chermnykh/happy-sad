@@ -47,7 +47,7 @@ def predict(image):
     classifier_model = "model.h5"
     IMAGE_SHAPE = (150, 150, 3)
     model = load_model(classifier_model, compile=False, custom_objects={'KerasLayer': hub.KerasLayer})
-    test_image = image.resize((150, 150))
+    test_pic = image.resize((150, 150))
   
     test_pic = tf.keras.preprocessing.image.img_to_array(test_pic)
     test_pic = test_pic/255 # normalization
