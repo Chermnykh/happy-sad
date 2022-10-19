@@ -55,14 +55,14 @@ def predict(image):
         'Happy',
         'Sad']
     predictions = model.predict(test_image)
-    scores = tf.nn.softmax(predictions[0])
-    scores = scores.numpy()
+#     scores = tf.nn.softmax(predictions[0])
+#     scores = scores.numpy()
     results = {
         'Happy': 0,
         'Sad': 0
     }
 
-    result = f"{class_names[np.argmax(scores)]} with a {(100 * np.max(scores)).round(2)} % confidence."
+    result = f"{class_names}"
     return result
 
 
