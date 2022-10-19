@@ -48,20 +48,13 @@ def predict(image):
     IMAGE_SHAPE = (150, 150, 3)
     model = load_model(classifier_model, compile=False, custom_objects={'KerasLayer': hub.KerasLayer})
     test_image = image.resize((150, 150))
-    test_image = preprocessing.image.img_to_array(test_image)
-    test_image = test_image / 255.0
-    test_image = np.expand_dims(test_image, axis=0)
-    class_names = [
-        'Happy',
-        'Sad']
-    predictions = model.predict(test_image)
-#     scores = tf.nn.softmax(predictions[0])
-#     scores = scores.numpy()
-    results = {
-        'Happy': 0,
-        'Sad': 0
-    }
-    
+  
+    test_pic = tf.keras.preprocessing.image.img_to_array(test_pic)
+    test_pic = test_pic/255 # normalization
+    test_pic = np.expand_dims(test_pic, axis=0)
+    prediction = model.predict(test_pic)
+    print(prediction)
+
     if prediction[0] < 0:
         st.markdown("Prediction: Happy")
     else:
