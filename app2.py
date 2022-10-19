@@ -4,12 +4,12 @@ import matplotlib.pyplot as plt
 import tensorflow_hub as hub
 import tensorflow as tf         # lemvlm
 import numpy as np              # vkm
-from tensorflow import keras
+# from tensorflow import keras
 from tensorflow.keras.models import load_model          # hello
 from tensorflow.keras import preprocessing
 import time
 
-from tempfile import NamedTemporaryFile  # lrmve
+# from tempfile import NamedTemporaryFile  # lrmve
 
 fig = plt.figure()
 
