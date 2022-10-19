@@ -10,7 +10,7 @@ from tempfile import NamedTemporaryFile
 
 
 
-model = load_model('happy_sad_CNN.h5')
+model = load_model('model.h5')
 
 
 st.title('Emotions Classifier')
