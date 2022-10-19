@@ -36,6 +36,7 @@ if image_file_buffer is not None:
 # set a default image when no image is uploaded
 else:
     demo_image = "Validation/3.jpg"
+    demo_image = demo_image.resize((150, 150))
     # image = np.array(Image.open(demo_image))
 
     # display image
