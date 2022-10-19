@@ -50,7 +50,7 @@ test_pic = np.expand_dims(test_pic, axis=0)
 prediction = model.predict(test_pic)
 print(prediction)
 
-if prediction[0] < 0:
+if prediction[0] < 0.5:
     st.markdown("Prediction: Happy")
 else:
     st.markdown("Prediction: Sad")
