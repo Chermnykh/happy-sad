@@ -50,7 +50,7 @@ def predict(image):
     test_pic = image.resize((150, 150))
     test_pic = tf.keras.preprocessing.image.img_to_array(test_pic)
     test_pic = test_pic/255 # normalization
-#     test_pic = np.expand_dims(test_pic, axis=0)
+    test_pic = np.expand_dims(test_pic, axis=0)
     prediction = model.predict(test_pic)
     print(prediction)
 
@@ -66,17 +66,4 @@ def predict(image):
 if __name__ == "__main__":
     main()
 
-# #predict
-# test_pic = tf.keras.preprocessing.image.load_img(demo_image)
-# test_pic = test_pic.resize((150, 150))
-# test_pic = tf.keras.preprocessing.image.img_to_array(test_pic)
-# test_pic = test_pic/255 # normalization
-# test_pic = np.expand_dims(test_pic, axis=0)
-# prediction = model.predict(test_pic)
-# print(prediction)
-
-# if prediction[0] < 0.5:
-#     st.markdown("Prediction: Happy")
-# else:
-#     st.markdown("Prediction: Sad")
 
