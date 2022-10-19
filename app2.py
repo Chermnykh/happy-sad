@@ -36,7 +36,6 @@ if image_file_buffer is not None:
 # set a default image when no image is uploaded
 else:
     demo_image = "Validation/3.jpg"
-    demo_image = demo_image.resize((150, 150))
     # image = np.array(Image.open(demo_image))
 
     # display image
@@ -44,6 +43,7 @@ else:
 
 #predict
 test_pic = tf.keras.preprocessing.image.load_img(demo_image)
+test_pic = test_pic.resize(150, 150)
 test_pic = tf.keras.preprocessing.image.img_to_array(test_pic)
 test_pic = test_pic/255 # normalization
 test_pic = np.expand_dims(test_pic, axis=0)
